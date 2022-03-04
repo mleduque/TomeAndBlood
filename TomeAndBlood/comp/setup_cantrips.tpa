@@ -665,41 +665,7 @@ END
 //SR Dimension Jump: move to 2nd level
 //
 ACTION_IF (FILE_CONTAINS_EVALUATED (~SPELL.IDS~ ~[ %TAB%]WIZARD_DIMENSION_JUMP[ %TAB%%LNL%%MNL%%WNL%]~)) BEGIN
-/*
-  LAF RES_NUM_OF_SPELL_NAME
-	STR_VAR spell_name = ~WIZARD_DIMENSION_JUMP~
-	RET spell_res
-  END
-  ACTION_IF (FILE_EXISTS_IN_GAME ~%spell_res%.spl~) BEGIN
-   COPY_EXISTING ~%spell_res%.spl~ ~override~
-   ADD_SPELL ~override/%spell_res%.spl~ 2 2 WIZARD_DIMENSION_JUMP
-	WRITE_LONG 0x34 2
-	READ_LONG 0x50 "valid"
-	PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-		READ_STRREF 0x50 "desc"
-		INNER_PATCH_SAVE new_desc ~%desc%~ BEGIN
-			REPLACE_TEXTUALLY ~Level: 1~ ~Level: 2~
-		END
-		SAY_EVALUATED 0x50 ~%new_desc%~
-	END
-  END
-  ACTION_IF (FILE_EXISTS_IN_GAME ~scrl1v.itm~) BEGIN
-	COPY_EXISTING ~scrl1v.itm~ ~override~
-		WRITE_LONG 0x34 200
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 STR_VAR resource = EVAL ~%spell_res%~ END
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 147 STR_VAR resource = EVAL ~%spell_res%~ END
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 148 STR_VAR resource = EVAL ~%spell_res%~ END
-		READ_LONG 0x54 "valid"
-		PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-			READ_STRREF 0x54 "desc"
-			INNER_PATCH_SAVE new_desc ~%desc%~ BEGIN
-				REPLACE_TEXTUALLY ~Level: 1~ ~Level: 2~
-			END
-			SAY_EVALUATED 0x54 ~%new_desc%~
-		END
-	BUT_ONLY
-  END
-*/
+
   ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
 	APPEND ~hidespl.2da~ ~spwi109	1		0		0~
   END
@@ -772,92 +738,10 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~qdtnb_identify.qd~) BEGIN
 
 END
 
-//Infravision/True Strike: move to 2nd level if SR installed
-//
-// ... or maybe just set casting time = 9?
-//
-/*
-ACTION_IF (FILE_EXISTS_IN_GAME ~dvsrv4here.mrk~) BEGIN
-  COPY_EXISTING ~spwi111.spl~ ~override~
-  ADD_SPELL ~override/spwi111.spl~ 2 2 WIZARD_INFRAVISION
-	WRITE_LONG 0x34 2
-	READ_LONG 0x50 "valid"
-	PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-		READ_STRREF 0x50 "desc"
-		INNER_PATCH_SAVE new_desc ~%desc%~ BEGIN
-			REPLACE_TEXTUALLY ~Level: 1~ ~Level: 2~
-		END
-		SAY_EVALUATED 0x50 ~%new_desc%~
-	END
-  LAF RES_NUM_OF_SPELL_NAME
-	STR_VAR spell_name = ~WIZARD_INFRAVISION~
-	RET spell_res
-  END
-  ACTION_IF FILE_EXISTS_IN_GAME ~scrl76.itm~ THEN BEGIN
-	COPY_EXISTING ~scrl76.itm~ ~override~
-		WRITE_LONG 0x34 200
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 STR_VAR resource = EVAL ~%spell_res%~ END
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 147 STR_VAR resource = EVAL ~%spell_res%~ END
-		LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 148 STR_VAR resource = EVAL ~%spell_res%~ END
-		READ_LONG 0x54 "valid"
-		PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-			READ_STRREF 0x54 "desc"
-			INNER_PATCH_SAVE new_desc ~%desc%~ BEGIN
-				REPLACE_TEXTUALLY ~Level: 1~ ~Level: 2~
-			END
-			SAY_EVALUATED 0x54 ~%new_desc%~
-		END
-	BUT_ONLY
-  END
-  ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
-	APPEND ~hidespl.2da~ ~spwi111	1		0		0~
-  END
-  ACTION_IF (GAME_IS ~iwdee~) BEGIN
-	APPEND ~hidespl.2da~ ~spwi111	1		0~
-  END
-END
-*/
+
 COPY_EXISTING ~spwi111.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR speed = 9 END
 
-//Magic Missile: improved MM at 2nd level; reduced version at 1st
-//
-// EDIT - forget the fiery missiles thing, just nerf MM a bit.
-/*
-COPY_EXISTING ~spwi217.spl~ ~override~
-ADD_SPELL ~override/spwi217.spl~ 2 2 WIZARD_AGANNAZAR_SCORCHER_TNB
-LAF RES_NUM_OF_SPELL_NAME
-	STR_VAR spell_name = ~WIZARD_AGANNAZAR_SCORCHER_TNB~
-	RET spell_res
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~scrl1b.itm~ THEN BEGIN
-  COPY_EXISTING ~scrl1b.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 STR_VAR resource = EVAL ~%spell_res%~ END
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 147 STR_VAR resource = EVAL ~%spell_res%~ END
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 148 STR_VAR resource = EVAL ~%spell_res%~ END
-  BUT_ONLY
-END
-
-COPY ~TomeAndBlood/data/level_one_cantrips/spmagmis.bam~ ~override~
-//COPY ~TomeAndBlood/data/level_one_cantrips/d5wi217a.bam~ ~override~
-COPY ~TomeAndBlood/data/level_one_cantrips/d5wi217b.bam~ ~override~
-COPY ~TomeAndBlood/data/level_one_cantrips/d5wi217c.bam~ ~override~
-COPY ~TomeAndBlood/data/level_one_cantrips/d5wi217a.bam~ ~override/iscrl77.bam~
-COPY ~TomeAndBlood/data/level_one_cantrips/spwi112z.spl~ ~override/spwi217.spl~
-	SAY NAME1 @7123
-	SAY UNIDENTIFIED_DESC @7124
-	WRITE_ASCII 0x3a ~d5wi217c~ #8
-	LPF ALTER_SPELL_HEADER STR_VAR icon = ~d5wi217b~ END
-COPY_EXISTING ~scrl77.itm~ ~override~
-	SAY NAME2 @7123
-	SAY IDENTIFIED_DESC @7124	
-	WRITE_LONG 0x34 200
-	LPF ALTER_ITEM_HEADER STR_VAR icon = ~d5wi217b~ END
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 STR_VAR resource = ~SPWI217~ END
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 147 STR_VAR resource = ~SPWI217~ END
-	LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 148 STR_VAR resource = ~SPWI217~ END
-BUT_ONLY
-*/
 
 COPY_EXISTING ~spwi112.spl~ ~override~
 	SAY NAME1 @7121
@@ -1030,26 +914,6 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
 	APPEND ~hidespl.2da~ ~spwi220	1		0~
 END
 
-/*
-//Chill Touch: replace with Frost Fingers
-//
-ADD_PROJECTILE ~TomeAndBlood/data/level_one_cantrips/b_c103.pro~
-//COPY ~TomeAndBlood/data/level_one_cantrips/b_c103b.bam~ ~override~
-//COPY ~TomeAndBlood/data/level_one_cantrips/b_c103c.bam~ ~override~
-COPY ~TomeAndBlood/data/level_one_cantrips/spwi117.spl~ ~override~
-  SAY NAME1 @7171
-  SAY UNIDENTIFIED_DESC @7172
-  WRITE_SHORT 0x98 ~%b_c103%~
-  WRITE_ASCII 0x3a ~SPWI117C~
-  LPF ALTER_SPELL_HEADER STR_VAR icon = ~SPWI117B~ END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~scrl82.itm~ THEN BEGIN
-  COPY_EXISTING ~scrl82.itm~ ~override~
-	SAY NAME2 @7171
-	SAY IDENTIFIED_DESC @7172
-  BUT_ONLY
-END
-*/
 
 //Chromatic Orb: reduce power, randomize effects, /*replace MM*/
 //
@@ -1057,18 +921,6 @@ COPY ~TomeAndBlood/data/level_one_cantrips/spwi118.spl~ ~override~
   SAY NAME1 @7181
   SAY UNIDENTIFIED_DESC @7182
 
-/*
-COPY ~TomeAndBlood/data/level_one_cantrips/spwi118.spl~ ~override/spwi112.spl~
-  SAY NAME1 @7181
-  SAY UNIDENTIFIED_DESC @7182
-
-ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
-	APPEND ~hidespl.2da~ ~spwi112	1		0		0~
-END
-ACTION_IF (GAME_IS ~iwdee~) BEGIN
-	APPEND ~hidespl.2da~ ~spwi112	1		0~
-END
-*/
 
 //LMD: no spamming extra hp
 //
@@ -1156,18 +1008,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
 	END
   END
 BUT_ONLY
-
-////////////////////////////////////////////////////////////////////////////////////
-
-/*
-//Find Familiar
-//
-ACTION_IF FILE_EXISTS_IN_GAME ~spwi123.spl~ BEGIN
-  COPY_EXISTING ~spwi123.spl~ ~override~
-	LPF DELETE_EFFECT INT_VAR match_opcode = 261
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 172 target = 1 timing = 1 resist_dispel = 0 STR_VAR resource = ~spwi123~ END
-END
-*/
 
 ////////////////////////////////////////////////////////////////////////////////////
 
