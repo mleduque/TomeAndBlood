@@ -56,8 +56,8 @@
 @82 = ~Kit de mage : Arcaniste (Ne pas installer si vous prévoyez d'utiliser le lancer de sorts 5E pour tout le monde)~
 @85 = ~Kit d'ensorceleur : ensorceleur à mana~
 @91 = ~Rendre les objets à emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes~
-@92 = ~Bonus pour la mémorisation ET les emplacements de lancer~
-@93 = ~Bonus seulement pour les emplacements de lancer~
+@92 = ~Bonus pour la mémorisation ET les emplacements de préparation~
+@93 = ~Bonus seulement pour les emplacements de préparation~
 @95 = ~Bonus de lancer pour les scores de caractéristiques (installer APRÈS tout mod qui modifie les tables de sors !)~
 
 @100 = ~~
