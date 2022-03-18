@@ -405,7 +405,3 @@ Un sort de hantise permet au magicien de jouer avec les peurs naturelles pour pr
 
 Toute personne qui a été ciblée par ce sort, qu'elle ai ou non réussi le jet de sauvegarde, se méfiera pendant un certain temps, et ne pourra être affectée par ce sort pendant les 8 prochaines heures.
 ~
-
-// used to replace Level:1 with Level: 2 in spell descriptions
-@150000 = ~Niveau[^:]*: 1~
-@150001 = ~Niveau : 2~
