@@ -106,9 +106,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT universal_sr @160030
-					OUTER_SPRINT universal_no_sr @160050
-					LPF update_school ~%universal_no_sr%~ ~%universal_sr%~ END
+					SPRINT universal_sr @160110
+					SPRINT universal_no_sr @160150
+					LPF update_school STR_VAR school_no_sr = universal_no_sr school_sr = universal_sr END
 				END
 			BUT_ONLY
 		END
@@ -124,9 +124,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT universal_sr @160030
-					OUTER_SPRINT universal_no_sr @160050
-					LPF update_school ~%universal_no_sr%~ ~%universal_sr%~ END
+					SPRINT universal_sr @160110
+					SPRINT universal_no_sr @160150
+					LPF update_school STR_VAR school_no_sr = universal_no_sr school_sr = universal_sr END
 				END
 			BUT_ONLY
 		END
@@ -148,9 +148,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT abjuration_sr @160020
-					OUTER_SPRINT abjuration_no_sr @160040
-					LPF update_school ~%abjuration_no_sr%~ ~%abjuration_sr%~ END
+					SPRINT abjuration_sr @160100
+					SPRINT abjuration_no_sr @160140
+					LPF update_school STR_VAR school_no_sr = abjuration_no_sr school_sr = abjuration_sr END
 				END
 			BUT_ONLY
 		END
@@ -166,9 +166,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT abjuration_sr @160020
-					OUTER_SPRINT abjuration_no_sr @160040
-					LPF update_school ~%abjuration_no_sr%~ ~%abjuration_sr%~ END
+					SPRINT abjuration_sr @160100
+					SPRINT abjuration_no_sr @160140
+					LPF update_school STR_VAR school_no_sr = abjuration_no_sr school_sr = abjuration_sr END
 				END
 			BUT_ONLY
 		END
@@ -190,9 +190,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT alteration_sr @160021
-					OUTER_SPRINT alteration_no_sr @160041
-					LPF update_school ~%alteration_no_sr%~ ~%alteration_sr%~ END
+					SPRINT alteration_sr @160101
+					SPRINT alteration_no_sr @160141
+					LPF update_school STR_VAR school_no_sr = alteration_no_sr school_sr = alteration_sr END
 				END
 			BUT_ONLY
 		END
@@ -208,9 +208,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT alteration_sr @160021
-					OUTER_SPRINT alteration_no_sr @160041
-					LPF update_school ~%alteration_no_sr%~ ~%alteration_sr%~ END
+					SPRINT alteration_sr @160101
+					SPRINT alteration_no_sr @160141
+					LPF update_school STR_VAR school_no_sr = alteration_no_sr school_sr = alteration_sr END
 				END
 			BUT_ONLY
 		END
@@ -232,9 +232,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT conjuration_sr @160022
-					OUTER_SPRINT conjuration_no_sr @160042
-					LPF update_school ~%conjuration_no_sr%~ ~%conjuration_sr%~ END
+					SPRINT conjuration_sr @160102
+					SPRINT conjuration_no_sr @160142
+					LPF update_school STR_VAR school_no_sr = conjuration_no_sr school_sr = conjuration_sr END
 				END
 			BUT_ONLY
 		END
@@ -250,9 +250,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT conjuration_sr @160022
-					OUTER_SPRINT conjuration_no_sr @160042
-					LPF update_school ~%conjuration_no_sr%~ ~%conjuration_sr%~ END
+					SPRINT conjuration_sr @160102
+					SPRINT conjuration_no_sr @160142
+					LPF update_school STR_VAR school_no_sr = conjuration_no_sr school_sr = conjuration_sr END
 				END
 			BUT_ONLY
 		END
@@ -274,9 +274,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT divination_sr @160023
-					OUTER_SPRINT divination_no_sr @160043
-					LPF update_school ~%divination_no_sr%~ ~%divination_sr%~ END
+					SPRINT divination_sr @160103
+					SPRINT divination_no_sr @160143
+					LPF update_school STR_VAR school_no_sr = divination_no_sr school_sr = divination_sr END
 				END
 			BUT_ONLY
 		END
@@ -292,9 +292,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT divination_sr @160023
-					OUTER_SPRINT divination_no_sr @160043
-					LPF update_school ~%divination_no_sr%~ ~%divination_sr%~ END
+					SPRINT divination_sr @160103
+					SPRINT divination_no_sr @160143
+					LPF update_school STR_VAR school_no_sr = divination_no_sr school_sr = divination_sr END
 				END
 			BUT_ONLY
 		END
@@ -316,9 +316,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT enchantment_sr @160024
-					OUTER_SPRINT enchantment_no_sr @160044
-					LPF update_school ~%enchantment_no_sr%~ ~%enchantment_sr%~ END
+					SPRINT enchantment_sr @160104
+					SPRINT enchantment_no_sr @160144
+					LPF update_school STR_VAR school_no_sr = enchantment_no_sr school_sr = enchantment_sr END
 				END
 			BUT_ONLY
 		END
@@ -334,9 +334,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT enchantment_sr @160024
-					OUTER_SPRINT enchantment_no_sr @160044
-					LPF update_school ~%enchantment_no_sr%~ ~%enchantment_sr%~ END
+					SPRINT enchantment_sr @160104
+					SPRINT enchantment_no_sr @160144
+					LPF update_school STR_VAR school_no_sr = enchantment_no_sr school_sr = enchantment_sr END
 				END
 			BUT_ONLY
 		END
@@ -358,9 +358,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT evocation_sr @160025
-					OUTER_SPRINT evocation_no_sr @160045
-					LPF update_school ~%evocation_no_sr%~ ~%evocation_sr%~ END
+					SPRINT evocation_sr @160105
+					SPRINT evocation_no_sr @160145
+					LPF update_school STR_VAR school_no_sr = evocation_no_sr school_sr = evocation_sr END
 				END
 			BUT_ONLY
 		END
@@ -376,9 +376,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT evocation_sr @160025
-					OUTER_SPRINT evocation_no_sr @160045
-					LPF update_school ~%evocation_no_sr%~ ~%evocation_sr%~ END
+					SPRINT evocation_sr @160105
+					SPRINT evocation_no_sr @160145
+					LPF update_school STR_VAR school_no_sr = evocation_no_sr school_sr = evocation_sr END
 				END
 			BUT_ONLY
 		END
@@ -400,9 +400,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT illusion_sr @160026
-					OUTER_SPRINT illusion_no_sr @160046
-					LPF update_school ~%illusion_no_sr%~ ~%illusion_sr%~ END
+					SPRINT illusion_sr @160106
+					SPRINT illusion_no_sr @160146
+					LPF update_school STR_VAR school_no_sr = illusion_no_sr school_sr = illusion_sr END
 				END
 			BUT_ONLY
 		END
@@ -418,9 +418,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT illusion_sr @160026
-					OUTER_SPRINT illusion_no_sr @160046
-					LPF update_school ~%illusion_no_sr%~ ~%illusion_sr%~ END
+					SPRINT illusion_sr @160106
+					SPRINT illusion_no_sr @160146
+					LPF update_school STR_VAR school_no_sr = illusion_no_sr school_sr = illusion_sr END
 				END
 			BUT_ONLY
 		END
@@ -442,9 +442,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x50 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT necromancy_sr @160027
-					OUTER_SPRINT necromancy_no_sr @160047
-					LPF update_school ~%necromancy_no_sr%~ ~%necromancy_sr%~ END
+					SPRINT necromancy_sr @160107
+					SPRINT necromancy_no_sr @160147
+					LPF update_school STR_VAR school_no_sr = necromancy_no_sr school_sr = necromancy_sr END
 				END
 			BUT_ONLY
 		END
@@ -460,9 +460,9 @@ ACTION_PHP_EACH d5_scroll_spell_school AS scroll => school BEGIN
 				END
 				READ_LONG 0x54 "valid"
 				PATCH_IF (%valid% >= 0) BEGIN // verify name is valid
-					OUTER_SPRINT necromancy_sr @160027
-					OUTER_SPRINT necromancy_no_sr @160047
-					LPF update_school ~%necromancy_no_sr%~ ~%necromancy_sr%~ END
+					SPRINT necromancy_sr @160107
+					SPRINT necromancy_no_sr @160147
+					LPF update_school STR_VAR school_no_sr = necromancy_no_sr school_sr = necromancy_sr END
 				END
 			BUT_ONLY
 		END
@@ -938,53 +938,53 @@ END
 
 END 	//	end define function
 
-DEFINE_PATCH_FUNCTION update_school STR_VAR school_no_sr STR_VAR school_sr BEGIN
-	OUTER_SPRINT school_desc_1 @160000
-	OUTER_SPRINT school_desc_2 @160001
-	OUTER_SPRINT school_desc_3 @160002
-	OUTER_SPRINT school_desc_4 @160003
-	OUTER_SPRINT school_desc_5 @160004
-	OUTER_SPRINT school_desc_6 @160005
-	OUTER_SPRINT school_desc_7 @160006
-	OUTER_SPRINT school_desc_8 @160007
-	OUTER_SPRINT school_desc_9 @160008
-	OUTER_SPRINT school_desc_10 @160009
-	OUTER_SPRINT school_desc_11 @160010
-	OUTER_SPRINT school_desc_12 @160011
-	OUTER_SPRINT school_desc_13 @160012
-	OUTER_SPRINT school_desc_14 @160013
-	OUTER_SPRINT school_desc_15 @160014
-	OUTER_SPRINT school_desc_16 @160015
-	OUTER_SPRINT school_desc_17 @160016
-	OUTER_SPRINT school_desc_18 @160017
-	OUTER_SPRINT school_desc_19 @160018
-	OUTER_SPRINT school_desc_20 @160019
-	OUTER_SPRINT school_desc_21 @160020
-	OUTER_SPRINT school_desc_22 @160021
-	OUTER_SPRINT school_desc_23 @160022
-	OUTER_SPRINT school_desc_24 @160023
-	OUTER_SPRINT school_desc_25 @160024
-	OUTER_SPRINT school_desc_26 @160025
-	OUTER_SPRINT school_desc_27 @160026
-	OUTER_SPRINT school_desc_28 @160027
-	OUTER_SPRINT school_desc_29 @160028
-	OUTER_SPRINT school_desc_30 @160029
-	OUTER_SPRINT school_desc_31 @160030
-	OUTER_SPRINT school_desc_32 @160031
-	OUTER_SPRINT school_desc_33 @160032
-	OUTER_SPRINT school_desc_34 @160033
-	OUTER_SPRINT school_desc_35 @160034
-	OUTER_SPRINT school_desc_36 @160035
+DEFINE_PATCH_FUNCTION update_school STR_VAR school_no_sr = ~~ school_sr = ~~ BEGIN
+	SPRINT school_desc_1 @160000
+	SPRINT school_desc_2 @160001
+	SPRINT school_desc_3 @160002
+	SPRINT school_desc_4 @160003
+	SPRINT school_desc_5 @160004
+	SPRINT school_desc_6 @160005
+	SPRINT school_desc_7 @160006
+	SPRINT school_desc_8 @160007
+	SPRINT school_desc_9 @160008
+	SPRINT school_desc_10 @160009
+	SPRINT school_desc_11 @160010
+	SPRINT school_desc_12 @160011
+	SPRINT school_desc_13 @160012
+	SPRINT school_desc_14 @160013
+	SPRINT school_desc_15 @160014
+	SPRINT school_desc_16 @160015
+	SPRINT school_desc_17 @160016
+	SPRINT school_desc_18 @160017
+	SPRINT school_desc_19 @160018
+	SPRINT school_desc_20 @160019
+	SPRINT school_desc_21 @160020
+	SPRINT school_desc_22 @160021
+	SPRINT school_desc_23 @160022
+	SPRINT school_desc_24 @160023
+	SPRINT school_desc_25 @160024
+	SPRINT school_desc_26 @160025
+	SPRINT school_desc_27 @160026
+	SPRINT school_desc_28 @160027
+	SPRINT school_desc_29 @160028
+	SPRINT school_desc_30 @160029
+	SPRINT school_desc_31 @160030
+	SPRINT school_desc_32 @160031
+	SPRINT school_desc_33 @160032
+	SPRINT school_desc_34 @160033
+	SPRINT school_desc_35 @160034
+	SPRINT school_desc_36 @160035
 
-	OUTER_SPRINT abjuration @160100
-	OUTER_SPRINT alteration @160101
-	OUTER_SPRINT conjuration @160102
-	OUTER_SPRINT divination @160103
-	OUTER_SPRINT enchantment @160104
-	OUTER_SPRINT evocation @160105
-	OUTER_SPRINT illusion @160106
-	OUTER_SPRINT necromancy @160107
-	OUTER_SPRINT universal @160110
+	SPRINT abjuration @160100
+	SPRINT alteration @160101
+	SPRINT conjuration @160102
+	SPRINT divination @160103
+	SPRINT enchantment @160104
+	SPRINT evocation @160105
+	SPRINT illusion @160106
+	SPRINT necromancy @160107
+	SPRINT universal @160110
 
 	READ_STRREF 0x54 "desc"
 
