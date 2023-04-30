@@ -713,3 +713,16 @@ Cette compétence permet à l'arcaniste de préparer une nouvelle collection de 
 @21995 = ~Emplacement de sort de niveau 5 additionnel~
 @21996 = ~Emplacement de sort de niveau 6 additionnel~
 @21997 = ~Emplacement de sort de niveau 7 additionnel~
+
+
+// Choose familiar UI
+@150100 = ~Choisissez un familier parmi les options suivantes. Ce choix est définitif.~ // tip
+@150101 = ~Choisissez un familier parmi les options suivantes~ // title
+@150102 = ~Ce choix est définitif~ // label
+
+// mana sorcerer spell selection UI
+@150200 = ~Choix des sorts~ // name
+@150201 = ~Choix des sorts~ // tip
+@150202 = ~Cette aptitude vous permet de choisir des nouveaux sorts~ // desc
+@150203 = ~Choix des sorts~ // title
+@150204 = ~Choix des sorts~ // label
