@@ -551,18 +551,24 @@ BUT_ONLY
 
  INCLUDE ~tomeandblood/lib/sequencer_menu.tpa~
 
+ OUTER_SPRINT name  @150200
+ OUTER_SPRINT tip  @150201
+ OUTER_SPRINT desc  @150202
+ OUTER_SPRINT title  @150203
+ OUTER_SPRINT label  @150204
+
  LAF CREATE_SEQUENCER_MENU 
   INT_VAR 
-	name = RESOLVE_STR_REF (~Spell Selection~)
-	tip = RESOLVE_STR_REF (~Spell Selection~)
-	desc = RESOLVE_STR_REF (~This ability allows you to learn new spells~)
+	name = RESOLVE_STR_REF (~%name%~)
+	tip = RESOLVE_STR_REF (~%tip%~)
+	desc = RESOLVE_STR_REF (~%desc%~)
   STR_VAR 
 	resref = ~d5mnsrc~
 	spelllist = ~d5mnsrc~
 	spelltable = ~QD_SPLSRCKN~
 	icon = ~spcl919b~
-	title = ~Spell Selection~
-	label = ~Select a spell to learn~
+	title = ~%title%~
+	label = ~%label%~
 	subspell = ~M~
  END
 

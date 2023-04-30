@@ -2667,6 +2667,18 @@ You can craft and recharge items, if you have the right spell and enough gold.~
 @150003 = ~5 rounds~ //original
 @150004 = ~10 rounds~ //replacement
 
+// Choose familiar UI
+@150100 = ~Choose a familiar from the following options. This choice is permanent.~ // tip
+@150101 = ~Choose a familiar from the following options~ // title
+@150102 = ~This choice is permanent~ // label
+
+// mana sorcerer spell selection UI
+@150200 = ~Spell Selection~ // name
+@150201 = ~Spell Selection~ // tip
+@150202 = ~This ability allows you to learn new spells~ // desc
+@150203 = ~Spell Selection~ // title
+@150204 = ~Spell Selection~ // label
+
 // used to remove school from a scroll description
 // no SR
 @160000 = ~(Abjuration)~
