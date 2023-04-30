@@ -325,8 +325,8 @@ LAF CREATE_SEQUENCER_MENU
 	icon = ~spwi123b~
 	spelltable = ~d5famtbl~ 
 	spelllist = ~d5famls~
-	title = ~%title%~
-	label = ~%label%~
+	title = EVALUATE_BUFFER ~%title%~
+	label = EVALUATE_BUFFER ~%label%~
 END
 
 ACTION_FOR_EACH num IN ~1~ ~2~ ~3~ ~4~ ~5~ ~6~ ~7~ ~8~ BEGIN
