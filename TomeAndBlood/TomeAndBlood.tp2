@@ -29,7 +29,8 @@ END
 /* Language Settings */
 AUTO_TRA ~TomeAndBlood/lang/%s~
 LANGUAGE ~English~ ~english~ ~TomeAndBlood/lang/english/setup.tra~ 
-
+LANGUAGE ~French~ ~french~
+		~TomeAndBlood/lang/french/setup.tra~
 
 
 // -----------------------------
