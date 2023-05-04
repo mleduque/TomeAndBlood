@@ -2656,3 +2656,7 @@ You can brew potions if you have the right spell and enough gold.~
 @115256 = ~Craft Item
 You can craft and recharge items, if you have the right spell and enough gold.~
 
+// used to replace Level:1 with Level: 2 in spell descriptions and for identify spell tweak
+@150000 = ~Level: 1~
+@150001 = ~Level: 2~
+@150002 = ~Level: ~
