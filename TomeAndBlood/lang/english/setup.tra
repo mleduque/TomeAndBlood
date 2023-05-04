@@ -2679,6 +2679,9 @@ You can craft and recharge items, if you have the right spell and enough gold.~
 @150203 = ~Spell Selection~ // title
 @150204 = ~Spell Selection~ // label
 
+// identify UI
+@150300 = ~Remaining Identify Uses: ~
+
 // used to remove school from a scroll description
 // no SR
 @160000 = ~(Abjuration)~
