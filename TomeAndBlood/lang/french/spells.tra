@@ -421,6 +421,9 @@ Rat
 @150003 = ~5[^r][^r]?rounds~ //original
 @150004 = ~10 rounds~ //replacement
 
+// identify UI
+@150300 = ~Identifications restantes : ~
+
 // used to remove school from a scroll description
 // no SR
 @160000 = ~(Abjuration)~
