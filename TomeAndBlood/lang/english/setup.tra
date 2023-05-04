@@ -2663,3 +2663,6 @@ You can craft and recharge items, if you have the right spell and enough gold.~
 @150000 = ~Level: 1~
 @150001 = ~Level: 2~
 @150002 = ~Level: ~
+// invisibility tweak
+@150003 = ~5 rounds~ //original
+@150004 = ~10 rounds~ //replacement
