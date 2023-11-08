@@ -627,6 +627,9 @@ La chaîne de contingence canalise une partie de l'énergie magique du lanceur e
 @8303  = ~Changer ce sort~
 @8304  = ~Changer un autre sort~
 
+// identify UI
+@150300 = ~Identifications restantes : ~
+
 //
 // ... multiclass sorcerers
 //
